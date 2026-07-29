@@ -2,62 +2,111 @@ print("Willkommen zum Rügen Fishing Agent")
 
 saison = input(
     "Nenne einen Monat, in dem du auf Rügen angeln magst. Ich sage dir dann, welcher Zielfisch in dieser Saison gut geeignet ist. ")
-match saison:
+while True:
 
+# Erste Saison, erste Saison, erste Saison
+
+ match saison:
     case "Oktober" | "November":
-        print("Herbsthecht und Plattfische von der Seebrücke (Flunder und Scholle)")
+        print(
+            "Herbsthecht und Plattfische von der Seebrücke (Flunder, Kliesche und Scholle)")
 
         Zielfisch = input("Möchtest du Herbsthecht oder Plattfisch angeln? ")
         match Zielfisch:
 
-            case "Herbsthecht" | "Herbsthechte" | "Hecht" | "Hechte":
-                print("Das ist eine aufregende Wahl. Die Hechte sind im " + saison +
-                      " extrem aggresiv und fressen sich für den Winter Fettreserven an.")
-                Hotspot = input("Willst du wissen, wo die Hotspots für " +
-                                Zielfisch + " in Rügener Gewässern sind ? ")
-                match Hotspot:
-                    case "ja" | "Ja":
-                        print("Hotspots sind Schilfkanten und Fahrrinnen im Strelasund, Greifswalder Bodden, Kubitzer Bodden, Großer Jasmunder Bodden und die Heringsstraße bei Vaschwitz.")
-                    case "nein":
-                        print(
-                            "Na dann, viel Spaß in Rügener Gewässern und Petri Heil!!")
-                Köder = input("Willst du wissen, welche Köder du für " +
-                              Zielfisch + " im " + saison + " brauchst ? ")
-                match Köder:
-                    case "ja" | "Ja":
-                        print("Nimm große Gummifische oder große Wobbler.")
-                    case "nein" | "Nein":
-                        print("Viel Erfolg! Petri Heil!!")
+                case "Herbsthecht" | "Herbsthechte" | "Hecht" | "Hechte":
+                    print("Das ist eine aufregende Wahl. Die Hechte sind im " + saison +
+                          " extrem aggresiv und fressen sich für den Winter Fettreserven an.")
+                    Hotspot = input("Willst du wissen, wo die Hotspots für " +
+                                    Zielfisch + " in Rügener Gewässern sind ? ")
+                    match Hotspot:
+                        case "ja" | "Ja":
+                            print(
+                                "Hotspots sind Schilfkanten und Fahrrinnen im Strelasund, Greifswalder Bodden, Kubitzer Bodden, Großer Jasmunder Bodden und die Heringsstraße bei Vaschwitz.")
+                        case "nein":
+                            print(
+                                "Na dann, viel Spaß in Rügener Gewässern und Petri Heil!!")
+                            continue
+                    Köder = input("Willst du wissen, welche Köder du für " +
+                                  Zielfisch + " im " + saison + " brauchst ? ")
+                    match Köder:
+                        case "ja" | "Ja":
+                            print("Nimm große Gummifische oder große Wobbler.")
+                        case "nein" | "Nein":
+                            print("Viel Erfolg! Petri Heil!!")
+                            continue
 
-            case "Plattfisch" | "Plattfische" | "Platte":
-                print("Eine ausgezeichnete Wahl. Platten fühlen sich im " +
-                      saison + " in dem brackwasserreichen Gewässern Rügens sehr wohl.")
-                Hotspot = input("Willst du wissen, wo die Hotspots für " +
-                                Zielfisch + " in Rügener Gewässern sind? ")
-                match Hotspot:
-                    case "ja" | "Ja":
-                        print(
-                            "Hotspots sind vor allem sandige Böden an Ostseestränden. Besonders beliebt sind Seebrücken in den Ostseebädern Sellin, Göhren und Binz.")
-                    case "nein" | "Nein":
-                        print(
-                            "Na dann, viel Spaß in Rügener Gewässern und Petri Heil!!")
-                Köder = input("Willst du wissen, welche Köder du für " +
-                              Zielfisch + " im " + saison + " brauchst ? ")
-                match Köder:
-                    case "ja" | "Ja":
-                        print(
-                            "Nimm eine Nachläufer-Montage mit Lockperlen, befestige Heringsfetzen, Maden oder Wattwürmer.")
-                    case "nein" | "Nein":
-                        print("Na dann, Petri Heil!!")
+                case "Plattfisch" | "Plattfische" | "Platte":
+                    print("Eine ausgezeichnete Wahl. Platten fühlen sich im " +
+                          saison + " in dem brackwasserreichen Gewässern Rügens sehr wohl.")
+                    Hotspot = input("Willst du wissen, wo die Hotspots für " +
+                                    Zielfisch + " in Rügener Gewässern sind? ")
+                    match Hotspot:
+                        case "ja" | "Ja":
+                            print(
+                                "Hotspots sind vor allem sandige Böden an Ostseestränden. Besonders beliebt sind Seebrücken in den Ostseebädern Sellin, Göhren und Binz.")
+                        case "nein" | "Nein":
+                            print(
+                                "Na dann, viel Spaß in Rügener Gewässern und Petri Heil!!")
+                    Köder = input("Willst du wissen, welche Köder du für " +
+                                  Zielfisch + " im " + saison + " brauchst ? ")
+                    match Köder:
+                        case "ja" | "Ja":
+                            print(
+                                "Nimm eine Nachläufer-Montage mit Lockperlen, befestige Heringsfetzen, Maden oder Wattwürmer.")
+                        case "nein" | "Nein":
+                            print("Na dann, Petri Heil!!")
+                            continue
 
-            case _:
-                print(
-                    "Für diesen Zielfisch habe ich keinen Rat. Versuche es nochmal und achte auf die richtige Schreibweise")
+                case _:
+                    print(
+                        "Für diesen Zielfisch habe ich keinen Rat. Versuche es nochmal und achte auf die richtige Schreibweise")
+                    continue
+
+# Nächste Saison XX Nächste Saison XX Nächste Saison XX Nächste Saison XX Nächste Saison
 
     case "März" | "April":
-        print("Heringsangeln oder Mefo")
+        print("Heringsangeln. Das ist eine aufregende Wahl. Riesige Heringsschwärme kommen im " + saison +
+              " in die Rügener Bodden, um zu laichen")
+        Hotspot = input(
+            "Willst du wissen, wo die Hotspots für Heringe in Rügener Gewässern sind ? ")
+        match Hotspot:
+            case "ja" | "Ja":
+                print("Hotspots sind der Strelasund, der Greifswalder Bodden und Heringsstraße bei Vaschwitz. Vom Ufer empfähle ich den Pfeiler des Rügendamms und die Stralsunder Nordmole")
+            case "nein":
+                print("Na dann, viel Spaß in Rügener Gewässern und Petri Heil!!")
+                continue
+        Köder = input(
+            "Willst du wissen, welche Köder du für Hering im " + saison + " brauchst ? ")
+        match Köder:
+            case "ja" | "Ja":
+                print("Am Fängigsten ist ein Heringspaternoster und Heringsblei")
+            case "nein" | "Nein":
+                print("Viel Erfolg! Petri Heil!!")
+                continue
+
+
+# Nächste Saison XX Nächste Saison XX Nächste Saison
+
     case "Mai":
-        print("Hornhecht")
+      print ("Sobald der Raps blüht, ist es soweit: Die Hornhechte, auch Silberpfeile genannt, schwärmen im " + saison + " in die Rügener Gewässer. Sie fressen Heringe und laichen.")
+      Hotspot = input ("Willst du wissen, wo die Hotspots für Hornhechte in Rügerner Gewässern sind ? ")
+      match Hotspot:
+          case "Ja" | "ja":
+              print ("Sehr fängig ist der Strelasund (besonders bei Glewitz), die Heringsstraße von Vaschwitz und der Greifswalder Bodden, Ecke Rosengarten.")
+          case "Nein" | "nein":
+              print ("Dann wünsche ich Dir viel Spaß. Petri Heil!")
+              break 
+      Köder = input ("Willst du wissen, welchen Köder du für Hornhecht im " + saison + " brauchst ? ")
+      match Köder: 
+          case "Ja" | "ja":
+              print ("Bastele dir eine Montage mit einem Sbirulino, 3-Fach-Wirbel, einem Fluorocarbon-Vorfach und Perlen zwischen den Elementen. Du brauchst einen kleinen Haken mit Heringsfetzen.")
+          case "Nein" | "nein": 
+              print ("Petri Heil!")
+              continue
+
+# Nächste Saison XX Nächste Saison XX Nächste Saison 
+
     case "Juni" | "Juli":
         print("Räubersaison (Flussbarsch, Hecht und Zander)")
     case "August":
